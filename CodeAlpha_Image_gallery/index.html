@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Image Gallery</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<h1>Responsive Image Gallery</h1>
+
+
+<div class="filters">
+  <button onclick="filterImages('all')">All</button>
+  <button onclick="filterImages('nature')">Nature</button>
+  <button onclick="filterImages('animal')">Animals</button>
+  <button onclick="filterImages('bird')">Birds</button>
+  <button onclick="filterImages('food')">Food
+
+  </button>
+</div>
+
+
+<div class="gallery">
+  <img src="images/gal.image1" class="nature" onclick="openLightbox(0)">
+  <img src="images/gal.image2.jpg" class="nature" onclick="openLightbox(1)">
+  <img src="images/gal.image3.jpg" class="animal" onclick="openLightbox(2)">
+  <img src="images/gal.image4.jpg" class="nature" onclick="openLightbox(3)">
+  <img src="images/gal.image5.jpg" class="animal" onclick="openLightbox(4)">
+  <img src="images/gal.image6.jpg" class="animal" onclick="openLightbox(3)">
+  <img src="images/gal.image7.jpg" class="nature" onclick="openLightbox(3)">
+  <img src="images/gal.image8.jpg" class="nature" onclick="openLightbox(3)">
+  <img src="images/gal.image9.jpg" class="bird" onclick="openLightbox(3)">
+  <img src="images/gal.image10.jpg" class="food" onclick="openLightbox(3)">
+  <img src="images/gal.image11.png" class="food" onclick="openLightbox(3)">
+  <img src="images/gal.image12.jpg" class="animal" onclick="openLightbox(3)">
+  <img src="images/gal.image.13.jpg" class="animal" onclick="openLightbox(3)">
+  <img src="images/gal.image.14.jpg" class="bird" onclick="openLightbox(3)">
+  <img src="images/gal.image15.webp" class="food" onclick="openLightbox(3)">
+  <img src="images/gal.image16.webp" class="bird" onclick="openLightbox(3)">
+  
+</div>
+
+<!-- Lightbox -->
+<div id="lightbox">
+  <span class="close" onclick="closeLightbox()">×</span>
+  <button class="prev" onclick="changeImage(-1)">❮</button>
+  <img id="lightbox-img">
+  <button class="next" onclick="changeImage(1)">❯</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
