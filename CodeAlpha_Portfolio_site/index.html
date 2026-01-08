@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prathyusha Satheesh | Portfolio</title>
+
+<style>
+:root{
+  --primary:#3b82f6;
+  --bg:#0b0f1a;
+  --card:#12182b;
+  --text:#e5e7eb;
+  --muted:#9ca3af;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Inter,system-ui,sans-serif;
+}
+
+html{scroll-behavior:smooth;}
+body{
+  background:var(--bg);
+  color:var(--text);
+}
+
+/* NAVBAR */
+header{
+  position:fixed;
+  width:100%;
+  top:0;
+  background:rgba(11,15,26,.9);
+  backdrop-filter:blur(12px);
+  z-index:1000;
+}
+.nav{
+  max-width:1200px;
+  margin:auto;
+  padding:18px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+.nav a{
+  color:var(--text);
+  margin-left:22px;
+  text-decoration:none;
+  font-weight:500;
+}
+.brand span{color:var(--primary);}
+
+/* HERO */
+.hero{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:120px 20px;
+  text-align:center;
+  background:radial-gradient(circle at top,#1d4ed8,transparent 60%);
+}
+.hero h1{
+  font-size:clamp(2.2rem,5vw,3.5rem);
+}
+.hero p{
+  max-width:700px;
+  margin:20px auto;
+  color:var(--muted);
+}
+.btn{
+  display:inline-block;
+  padding:12px 28px;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:600;
+  margin:10px;
+}
+.primary{background:var(--primary);color:white;}
+.outline{border:2px solid var(--primary);color:var(--primary);}
+
+/* SECTIONS */
+section{
+  padding:100px 20px;
+  max-width:1200px;
+  margin:auto;
+  opacity:0;
+  transform:translateY(40px);
+  transition:0.8s ease;
+}
+section.show{
+  opacity:1;
+  transform:translateY(0);
+}
+h2{
+  text-align:center;
+  font-size:2.4rem;
+  margin-bottom:30px;
+}
+
+/* SKILLS */
+.skills{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+}
+.skill{
+  background:var(--card);
+  padding:20px;
+  border-radius:14px;
+  text-align:center;
+}
+
+/* PROJECTS */
+.projects{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:25px;
+}
+.project{
+  background:var(--card);
+  padding:28px;
+  border-radius:18px;
+  transition:.3s;
+}
+.project:hover{
+  transform:translateY(-6px);
+}
+.project h3{
+  margin-bottom:10px;
+}
+.project p{
+  color:var(--muted);
+  font-size:.95rem;
+}
+.tag{
+  display:inline-block;
+  margin-top:12px;
+  margin-right:8px;
+  padding:6px 14px;
+  border-radius:20px;
+  background:rgba(59,130,246,.15);
+  color:var(--primary);
+  font-size:.75rem;
+}
+
+/* CONTACT */
+.contact{
+  text-align:center;
+  background:var(--card);
+  padding:40px;
+  border-radius:20px;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:30px;
+  color:var(--muted);
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="nav">
+    <h3 class="brand">Prathyusha<span>.</span></h3>
+    <div>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section id="home" class="hero show">
+  <div>
+    <h1>Building intelligent & elegant tech solutions</h1>
+    <p>
+      AI & Data Science undergraduate with strong interest in Java,
+      problem-solving, and modern web technologies.
+    </p>
+    <a href="#projects" class="btn primary">View Projects</a>
+    <a href="#contact" class="btn outline">Contact</a>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <h2>About Me</h2>
+  <p style="text-align:center;max-width:850px;margin:auto;color:var(--muted);">
+    I am currently pursuing BSc Computer Science with Artificial Intelligence
+    and Data Science at KPR College of Arts, Science and Research.
+    A quick learner with a strong academic background, certified by NPTEL,
+    and actively involved in hackathons, patents, and research activities.
+  </p>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="skills">
+    <div class="skill">Java · OOP · Exception Handling</div>
+    <div class="skill">HTML · CSS · Responsive Design</div>
+    <div class="skill">JavaScript · Logic Building</div>
+    <div class="skill">AI & Data Science (Foundations)</div>
+    <div class="skill">Problem Solving · DSA</div>
+    <div class="skill">Git · VS Code</div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <h2>Projects</h2>
+
+  <div class="projects">
+
+    <div class="project">
+      <h3>Ludo Board Game</h3>
+      <p>
+        Developed a Java-based Ludo game using object-oriented programming.
+        Implemented player turns, score tracking, and exception handling
+        for smooth gameplay.
+      </p>
+      <span class="tag">Java</span>
+      <span class="tag">OOP</span>
+    </div>
+
+    <div class="project">
+      <h3>Calculator Application</h3>
+      <p>
+        Designed a basic calculator using HTML, CSS, and JavaScript
+        supporting arithmetic operations with clean UI and logic handling.
+      </p>
+      <span class="tag">JavaScript</span>
+      <span class="tag">Frontend</span>
+    </div>
+
+    <div class="project">
+      <h3>Mini Image Gallery</h3>
+      <p>
+        Created a responsive image gallery layout using modern CSS techniques
+        with hover effects and flexible grid design.
+      </p>
+      <span class="tag">CSS</span>
+      <span class="tag">UI Design</span>
+    </div>
+
+    <div class="project">
+      <h3>Restaurant Website</h3>
+      <p>
+        Built a responsive restaurant website showcasing menu, images,
+        and contact information with clean layouts and modern styling.
+      </p>
+      <span class="tag">HTML</span>
+      <span class="tag">CSS</span>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <h2>Contact</h2>
+  <div class="contact">
+    <p>Email: <strong>prathyushaa.1011@gmail.com</strong></p>
+    <p>Phone: <strong>+91 9629034886</strong></p>
+    <p>Location: Coimbatore, Tamil Nadu</p>
+    <a href="#" class="btn outline">LinkedIn</a>
+  </div>
+</section>
+
+<footer>
+  © 2026 Prathyusha Satheesh
+</footer>
+
+<script>
+/* Scroll reveal animation */
+const sections = document.querySelectorAll("section");
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add("show");
+    }
+  });
+},{threshold:0.2});
+
+sections.forEach(sec => observer.observe(sec));
+</script>
+
+</body>
+</html>
